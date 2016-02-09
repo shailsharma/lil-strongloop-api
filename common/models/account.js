@@ -2,7 +2,8 @@ module.exports = function(Account) {
  Account.greet = function(cb) {
     var msg = 'User';
     cb(null, 'grettings.... ' + msg );
- }
+ };
+ 
  Account.remoteMethod(
     'greet',
     {

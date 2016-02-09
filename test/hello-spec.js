@@ -10,4 +10,3 @@ describe('Mocha tests', function(){
   });
 
 });
->>>>>>> added simple test
