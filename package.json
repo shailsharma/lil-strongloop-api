@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
+    "test": "mocha",
     "start": "node .",
     "pretest": "jshint .",
     "posttest": "nsp check"
@@ -19,7 +20,9 @@
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "jshint": "^2.5.6",
+    "mocha": "^2.4.5",
     "nsp": "^2.1.0"
   },
   "repository": {
