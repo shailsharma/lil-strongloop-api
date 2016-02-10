@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Pradip Hudekar
+MAINTAINER Tushar Gangwal
 
 RUN groupadd -r lil && useradd -r -g lil lil-api
 
@@ -21,10 +21,10 @@ WORKDIR /app
 
 ADD . /app
 
-RUN npm install strapi -g
+RUN npm install -g strongloop
 
 RUN npm install
 
 EXPOSE 1337
 
-ENTRYPOINT ["strapi", "start"]
+ENTRYPOINT ["node", "."]
