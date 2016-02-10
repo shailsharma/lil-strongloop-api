@@ -1,3 +1,11 @@
 machine:
+  services:
+    - docker
   node:
     version: 5.2.0
+
+deployment:
+    staging:
+      branch: master
+      commands:
+        - ./deploy.sh

@@ -4,9 +4,7 @@
   "main": "server/server.js",
   "scripts": {
     "test": "mocha",
-    "start": "node .",
-    "pretest": "jshint .",
-    "posttest": "nsp check"
+    "start": "node ."
   },
   "dependencies": {
     "compression": "^1.0.3",
