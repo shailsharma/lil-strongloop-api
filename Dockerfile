@@ -25,6 +25,6 @@ RUN npm install -g strongloop
 
 RUN npm install
 
-EXPOSE 1337
+EXPOSE 3000
 
 ENTRYPOINT ["node", "."]
