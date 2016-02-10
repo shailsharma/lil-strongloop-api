@@ -13,4 +13,4 @@ docker push lilapi/lil-strongloop-api:latest
 
 
 # trigger deployment
-# curl -X POST https://dashboard.tutum.co/api/v1/service/4edf2588-2eed-4d35-969f-5531f9723b18/trigger/b9f7ef65-d04f-42ec-b166-2a9480ba58ac/call/
+curl -X POST https://dashboard.tutum.co/api/v1/service/dcc48807-b304-4581-b8ab-1836f3af5321/trigger/c8069737-d0e5-4d5c-a4c5-50b531848cc3/call/
