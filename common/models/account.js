@@ -1,4 +1,9 @@
 module.exports = function(Account) { 
+	Account.sendGreet = function(cb) {
+        var msg = "Greetings Recieved";
+        console.dir(msg);
+        cb(null, msg);
+    };
 
 	Account.beforeRemote('greet', function( context, modelInstance, next) { // modelInstance argument is unused here.. 
 		console.log('Before Greetings');
@@ -51,4 +56,12 @@ module.exports = function(Account) {
 			returns: {arg: 'results', type: 'string'}
 	    }
 	);
+
+	Account.remoteMethod(
+        'sendGreet',
+        {
+            http: {path: '/sendGreet', verb: 'post'},
+            returns: {arg: 'results', type: 'string'}
+        }
+    );
 };
