@@ -19,7 +19,7 @@ describe('Mocha tests', function(){
 
 describe('Get /greet', function(){
   it('Greet user', function(done){
-  	url = 'http://54.69.197.32:3000/api/accounts/greet';
+  	url = 'http://localhost:3000/api/accounts/greet';
     request(url, function(error, response, body) {
     	expect(response.statusCode).to.equal(200);
     	expect(body).to.equal('{"results":" Greetings "}');
@@ -32,7 +32,7 @@ describe('Get /greet', function(){
 
 describe('Post /sendGreet', function(){
   it('Send Greetings via Post', function(done){
-  	url = 'http://54.69.197.32:3000/api/accounts';
+  	url = 'http://localhost:3000/api/accounts';
     chai.request(url)
     .post('/sendGreet')
     .end(function(err, res){
