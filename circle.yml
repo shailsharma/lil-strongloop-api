@@ -7,8 +7,8 @@ machine:
 test:
     pre:
       - docker build -t lil-strongloop-api .
-      - docker run -p 3000:3000 lil-strongloop-api
-      
+      - docker run -d -name lil-api -p 3000:3000 lil-strongloop-api
+
 deployment:
     staging:
       branch: master
