@@ -1,4 +1,9 @@
-module.exports = function(Account) {
+module.exports = function(Account) { 
+
+	Account.beforeRemote('greet', function( context, modelInstance, next) { // modelInstance argument is unused here.. 
+		console.log('Before Greetings');
+		next();
+	});
  
 	Account.greet = function(cb) {
 		var msg = " Greetings ";
