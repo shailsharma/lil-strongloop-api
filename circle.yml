@@ -4,6 +4,11 @@ machine:
   node:
     version: 5.2.0
 
+test:
+    pre:
+      - docker build -t lil-strongloop-api .
+      - docker run -p 3000:3000 lil-strongloop-api
+      
 deployment:
     staging:
       branch: master

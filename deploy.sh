@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#build image
-docker build -t lil-strongloop-api .
-
 # tag image
 docker tag lil-strongloop-api:latest lilapi/lil-strongloop-api:latest
 #docker tag lil-strongloop-api:latest lilapi/lil-strongloop-api:build-$CIRCLE_BUILD_NUM
