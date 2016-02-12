@@ -35,5 +35,9 @@
   "Account": {
     "dataSource": "accountDS1",
     "public": true
+  },
+  "Quiz1": {
+    "dataSource": "accountDS1",
+    "public": true
   }
 }

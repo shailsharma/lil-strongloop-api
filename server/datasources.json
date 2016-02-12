@@ -18,7 +18,7 @@
     "database": "lil-db",
     "username": "liluser2",
     "password": "liluser2",
-    "name": "accountDS",
+    "name": "accountDS1",
     "connector": "mongodb"
   }
 }

@@ -1,0 +1,97 @@
+{       
+        "alias"         :    ,//String //Local/OnDevice ID; to be made as combination of ResourceID+UserID+TimeStamp 
+        "UID_Quiz"      :    ,//String // [3 Digit Language][2 Digit Subject][3 Digits Topics][2 Digits of subTopic][4 Digits of Quiz No.]
+        "version"	    :	 ,// String
+        "stage"         :    ,// String        
+        "title"			:	 ,// String        
+        "createdBy"		:	 ,// String        
+        "createdFor"	:	 ,// String          
+        "createdOn"		:	 ,//Date
+        "publishDateTime"	: ,  //Date with Time
+        "publishBy"		:	,//String
+        "licenceType"   : "Restricted", //String
+		"thumbnail": // Object,
+		{
+                        "default":  ,// String
+                        "hqDefault": // String
+        },   
+		 "mapping"	: // Object
+		 {
+            "UID_Curriculum"   		: ,//String or number ////Internal ID that we may like to maintain for specific selection 
+            "assessmentObjectives"	:	// Object
+			[
+			  {"Objective1"	:} //String
+			  {"Objective2"	:} //String
+            ],
+             "language"				:	,//String
+             "board"                :   ,//String
+             "class"				:	,//number
+             "subject"				:	,//String
+             "topics"				:   ,//String
+             "subTopic"				:	//String
+        },
+		"Questions"	: // Object
+		[
+            {
+               "order" 			: 	 ,// number
+                "UID_Question"  : 	 ,// number //Question Object Id
+                "type"			:    ,// String //MultipleChoice
+                "display"  		: 	 ,//String // Value is Radio.Single selection. Other choice may be Checkbox
+                "questionTxt"	: 	 ,//String //HTML Para equivalent
+                "resources" 	:	 // Object
+				[
+					{   
+						"UID_Resource":	,//String			
+						"ResourceType": ,//String
+						"Cloud_URL"	  : ,//String  //If any, In case of Cloudinary, C-URI,                               
+						"Device_URL"  : ,//String
+						"Version"     : ,//String  //Version of the resource
+						"thumbnail"   : // Object
+							{
+									"default"  :  ,// String
+									"hqDefault":  // String
+							}
+					}
+                ],
+				"AnswerOptions"	: // Object
+				[
+					{
+						"Option"	: ,//number //Could also be made object instead of attribute
+						"AnswerText": ,//String
+						"Resources" : ""
+					}								
+				],
+				"AnswerConfig" : 
+				{ 
+				    "CorrectAnswers"	:	,//String or number  //One or more options eg - ["1"],
+				    "AnswerExplaination": //String //HTML equivalent of the solution
+                },
+				"Hints": // Object
+				[ 
+				    {
+					    "Order"			: ,//number 
+						"HintText"		: ,//String
+						"Hint_Resources": // Object //May be more than one
+						[  
+							{
+								"UID_Resource":	,//String 			
+								"ResourceType": ,//String
+								"Cloud_URL"	  : ,//String //If any, In case of Cloudinary, C-URI,                               
+								"Device_URL"  : ,//String
+								"Version" 	  : ,//String //Version of the resource
+								"thumbnail"   : // Object
+									{
+										"default"	:  ,// String
+										"hqDefault" : // String
+									}, 
+							}									
+						]
+					}							 
+				],
+
+				"IfCorrect-SkiptoOrder" : //number //Transition to Question with order#6
+			}
+		]//end of Question array
+		
+}//End of document array
+                   

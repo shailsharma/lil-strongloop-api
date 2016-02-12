@@ -15,6 +15,18 @@
     },
     "lastModifiedAt": {
       "type": "date"
+    },
+    "thumbnail": {
+      "type": "object",
+      "propertie":  {
+        "default": {
+          "type": "string",
+           "required": true
+        },
+        "hqDefault": {
+          "type": "string"
+        }
+      }
     }
   },
   "validations": [],

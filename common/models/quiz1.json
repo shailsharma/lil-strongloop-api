@@ -1,0 +1,56 @@
+{
+  "name": "Quiz1",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "alias": {
+      "type": "string"
+    },
+    "UID_Quiz": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "createdFor": {
+      "type": "string"
+    },
+    "createdOn": {
+      "type": "date"
+    },
+    "publishDateTime": {
+      "type": "date"
+    },
+    "publishBy": {
+      "type": "string"
+    },
+    "licenceType": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "object"
+    },
+     "mapping": {
+      "type": "object"
+    },
+     "Questions": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

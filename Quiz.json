@@ -1,0 +1,247 @@
+//Quiz is a collection of Questions. 
+//A quiz can be used partially or in entirety. 
+//A quiz can be assignned as part of verification of can be presented as a mastery challenge
+//KeepAll attribute names in Camel Case
+{       
+    "alias"         :   "MyQuizID", //Local/OnDevice ID; to be made as combination of ResourceID+UserID+TimeStamp 
+    "UID_Quiz"        :   123121231231234,   // [3 Digit Language][2 Digit Subject][3 Digits Topics][2 Digits of subTopic][4 Digits of Quiz No.]
+    "version"	    :	"v0.1", //
+    "stage"         :   "Draft",        
+    "title"			:	"Assessment for Properties and Applications of Sound ",
+    "createdBy"		:	"Monika Khhanna",
+    "createdFor"	:	"St Xaviers, Gurgaon",  //"All relevant", "St Xavier Group of schools"  !!!!!!!!!    
+    "createdOn"		:	"12-12-2015",
+    "publishDateTime"	:	"13-12-2015 13:12:12",
+    "publishBy"		:	"Coordinator",
+    "licenceType"   : "Restricted", //only for schoo"Creative Common Attribution-Non Commercial"
+    "thumbnail":{
+        "default":"Lang/Board/Images/Physics/SOUND/Properties/Speed_Thumnail_Light.jpg", //Sample URL for light
+        "hqDefault":"Lang/Board/Images/Physics/SOUND/Properties/Speed_Thumnail_HQ.jpg", // High Quality thimbnail
+    },   
+	
+    
+   "mapping"	: {//mapping/MetaData for Curriculum Node.....Embedded subdocument
+        "UID_Curriculum"   : "Curriculum Node ID", //Internal ID that we may like to maintain for specific selection 
+        "assessmentObjectives"		:	[
+                    "Objective1"	: "Verify Understanding Properties of SOUND",
+                "Objective2"	: "Verify Understanding of application of SOUND"
+            ],
+         "language"				:	"English",
+         "board"                :    "CBSE",
+        "class"				     :	"9",
+         "subject"				:	"Physics",
+         "topics"				:   ["SOUND"], // a quiz may cut across multiple topics
+         "subTopic"				:	["Properties of SOUND", "Applications of SOUND"],
+    },
+    
+    "Questions"	:[
+                    {
+	                   "order" : 1,
+                        "UID_Question"  : "12356789", // Question Object ID
+                        "type"	: "MultipleChoice",
+                        "display": "Radio",  //Single selection. Other choice may be Checkbox
+                        "questionTxt"	: "Speed of Sound is maximum in ...", //HTML Para equivalent
+                        "resources" :[
+                                            {   
+                                                "UID_Resource":	"IMG-PHY-SOUND-PROPERTIES-001", 			
+                                                "ResourceType": "Image",
+                                                "Cloud_URL"	  : "Lang/Board/Images/Physics/SOUND/Properties/Speed.jpg", //If any, In case of Cloudinary, C-URI,                               
+                                                "Device_URL"  : "/Images/Physics/SOUND/Properties/Speed.jpg/",
+                                                "Version" :"12.2.03",    //Version of the resource
+                                                "thumbnail":{
+                                                            "default":"Lang/Board/Images/Physics/SOUND/Properties/Speed_Thumnail_Light.jpg", //Sample URL for light
+                                                            "hqDefault":"Lang/Board/Images/Physics/SOUND/Properties/Speed_Thumnail_HQ.jpg", // High Quality thimbnail
+                                                },
+                                            },
+                                        ],
+                        
+                        "AnswerOptions"	:[
+		                                  { 
+                                            "Option":1,
+                                            "AnswerText":	"Steel",
+                                            "Resources" :""
+                                            },
+                                            { 
+                                            "Option": 2, //Could also be made object instead of attribute
+                                            "AText":	"Water",
+                                            "Resaurces" :""
+                                            },
+                                            { 
+                                            "Option": 3,
+                                            "AText":	"Glass",
+                                            "Resaurces" :""
+                                            },
+                                            { 
+                                            "Option": 4,
+                                            "AText":	"Vacuum",
+                                            "Resaurces" :""
+                                            }
+                                      
+			             ],
+		                  "AnswerConfig":{ //Correct answer and solution
+		                                      "CorrectAnswers"	:	["1"],  //One or more options
+		                                      "AnswerExplaination": "Explaination Txt", //HTML equivalent of the solution
+                            },
+		                  
+                        "Hints":[ 
+			                     {	
+			                         "Order": 1, 
+                                     "HintText": "You may like to Recall the examples - Sound of Train on the Railway track",
+                                     "Hint_Resources":[  //May be more than one
+                                                            {   
+                                                                "UID_Resource":	"IMG-PHY-SOUND-PROPERTIES-001", 			
+                                                                "ResourceType": "Image",
+                                                                "Cloud_URL"	  : "Lang/Board/SOUND/Physics/Light/Properties/Steel_Track.jpg", //If any, In case of Cloudinary, C-URI,                               
+                                                                "Device_URL"  : "/Images/Physics/SOUND/Properties/Steel_Track.jpg/",
+                                                                "Version" :"12.2.03",    //Version of the resource
+                                                                "thumbnail":{
+                                                                                                                                "default":"Lang/Board/Images/Physics/SOUND/Properties/Speed_Thumnail_Light.jpg", //Sample URL for light
+                                                                "hqDefault":"Lang/Board/Images/Physics/SOUND/Properties/Speed_Thumnail_HQ.jpg", // High Quality thimbnail
+                                                                    }, 
+                                                                },
+                                                        ]
+			                     }, 
+
+			                     {
+                                    "Order": 2, 
+			                         "HintText": "You may like to refer some of the following resources",
+			                         "Hint Resources":[		
+				                                { 
+                                                    "UId_Resource"	:	"VID-PHY-SOUND-PROPERTIES-002", 
+                                                    "ResourceType": "Image",
+                                                    "Cloud_URL"	  : "Lang/Board/Images/Physics/SOUND/Properties/PROPERTIES_OF_SOUND.mpeg", //If any, In case of Cloudinary, C-URI,                               
+                                                    "Device_URL"  : "/Images/Physics/Light/Properties/PROPERTIES_OF_SOUND.mpeg",
+                                                    "Version" :"12.2.03",    //Version of the resource
+                                                    "Other"	:	"Other Video 	Details",
+                                                    "thumbnail":{
+                                                                    "default":"http://i.ytimg.com/vi/hYB0mn5zh2c/default.jpg",
+                                                                    "hqDefault":"http://i.ytimg.com/vi/hYB0mn5zh2c/hqdefault.jpg"
+                                                    },
+                                                },
+				                                { 
+                                                    "UId_Resource"	:	"VID-PHY-SOUND-PROPERTIES-004", 
+                                                    "ResourceType": "Image",
+                                                    "Cloud_URL"	  : "Lang/Board/Images/Physics/SOUND/Properties/Steel_Track.avi", //If any, In case of Cloudinary, C-URI,                               
+                                                    "Device_URL"  : "/Images/Physics/SOUND/Properties/Steel_Track.avi/",
+                                                    "Version" :"12.2.03",    //Version of the resource
+                                                    "Other"	:	"Other Video 	Details",
+                                                    "thumbnail":{
+                                                                    "default":"http://i.ytimg.com/vi/hYB0mn5zh2c/default.jpg",
+                                                                    "hqDefault":"http://i.ytimg.com/vi/hYB0mn5zh2c/hqdefault.jpg"
+                                                    },
+                                                },                      
+				                        ] //HintResources
+			                     }//Hint
+																		
+                        ],	//Hints	
+                        
+                        "IfCorrect-SkiptoOrder" :6 //Transition to Question with order#6
+                        
+                },//Question
+                														
+               { //Next Question
+	                   "Order" : 1,
+                        "UID_Question"  : "12356789", // Question Object ID
+                        "Type"	: "MultipleChoice",
+                        "Display": "CheckBox",  //Single selection. Other choice may be Checkbox
+                        "QuestionTxt"	: "Which all statements are true", //HTML Para equivalent
+                        "Resources" :"",
+                        
+                        "AnswerOptions"	:[
+		                                  { 
+                                            "Option":1,
+                                            "AnswerText":	"Speed of sound in Steel is higher than in water",
+                                            "Resources" :""
+                                            },
+                                            { 
+                                            "Option": 2, //Could also be made object instead of attribute
+                                            "AText":	"Speed of Sound is least in vacuum",
+                                            "Resources" :""
+                                            },
+                                            { 
+                                            "Option": 3,
+                                            "AText":	"Sound travel faster in Water than Air",
+                                            "Resources" :""
+                                            },
+                                            { 
+                                            "Option": 4,
+                                            "AText":	"Mach is equal to the speed of sound in Air",
+                                            "Resaurces" :""
+                                            }
+                                      
+			             ],
+		                  "AnswerConfig":{ //Correct answer and solution
+		                                      "CorrectAnswers"	:	["1","2","3", "4"],  //One or more options
+		                                      "AnswerExplaination": "Explaination Txt", //HTML equivalent of the solution
+                            },
+		                  
+                        "Hints":[ 
+			                     {	
+			                         
+                                    "Order": 1, 
+			                         "HintText": "You may like to refer some of the following resources",
+			                         "Hint Resources":[		
+				                                { 
+                                                    "UId_Resource"	:	"VID-PHY-SOUND-PROPERTIES-002", 
+                                                    "ResourceType": "Image",
+                                                    "Cloud_URL"	  : "Lang/Board/Images/Physics/SOUND/Properties/PROPERTIES_OF_SOUND.mpeg", //If any, In case of Cloudinary, C-URI,                               
+                                                    "Device_URL"  : "/Images/Physics/Light/Properties/PROPERTIES_OF_SOUND.mpeg",
+                                                    "Version" :"12.2.03",    //Version of the resource
+                                                    "Other"	:	"Other Video 	Details",
+                                                    "thumbnail":{
+                                                                    "default":"http://i.ytimg.com/vi/hYB0mn5zh2c/default.jpg",
+                                                                    "hqDefault":"http://i.ytimg.com/vi/hYB0mn5zh2c/hqdefault.jpg"
+                                                    },
+                                                },
+				                                { 
+                                                    "UId_Resource"	:	"VID-PHY-SOUND-PROPERTIES-004", 
+                                                    "ResourceType": "Image",
+                                                    "Cloud_URL"	  : "Lang/Board/Images/Physics/SOUND/Properties/Steel_Track.avi", //If any, In case of Cloudinary, C-URI,                               
+                                                    "Device_URL"  : "/Images/Physics/SOUND/Properties/Steel_Track.avi/",
+                                                    "Version" :"12.2.03",    //Version of the resource
+                                                    "Other"	:	"Other Video 	Details",
+                                                    "thumbnail":{
+                                                                    "default":"http://i.ytimg.com/vi/hYB0mn5zh2c/default.jpg",
+                                                                    "hqDefault":"http://i.ytimg.com/vi/hYB0mn5zh2c/hqdefault.jpg"
+                                                    },
+                                                },                      
+				                        ] //HintResources
+			                     }//Hints
+																		
+                            ],	//Hints		
+                   
+                   "IfCorrect-SkiptoOrder" :""
+                },//Question
+        { //Next Question
+	                   "Order" : 3,
+                        "UID_Question"  : "12356234", // Question Object ID
+                        "Type"	: "Reflective",
+                        "Display": "TextArea",  //Single selection. Other choice may be Checkbox
+                        "QuestionTxt"	: "Suppose you are in a moving train and there comes a whisling train from opposite direction. Explain the behaviour of sound as you hear the whistle of approaching train before and after it crosses your train.", //HTML Para equivalent
+                        "Resources" :"",
+                        
+                        "AnswerOptions"	:"", //No options for a reflective or descriptive questions.
+            
+
+		                  "AnswerConfig":{ //Correct answer and solution
+		                                      "CorrectAnswers"	:	"",  //As there are no options
+		                                      "AnswerExplaination": "Explaination Txt", //HTML equivalent of the solution
+                            },
+		                  
+                        "Hints":"", //Even there may not be hints
+                        "IfCorrect-SkiptoOrder" :"" //
+                },//Question
+    //.........  
+    //..........            
+    ],//End of Question Array
+}//End of Document
+    
+
+
+
+
+
+
+
+
+
