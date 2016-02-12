@@ -5,6 +5,7 @@ var chai = require('chai');
 var should = chai.should();
 var expect = chai.expect;
 var chaiHttp = require('chai-http');
+var id,body;
 
 chai.use(chaiHttp);
 
@@ -43,4 +44,25 @@ describe('Post /sendGreet', function(){
       done();
      });
    });
-})
+});
+
+describe('CRUD Operations', function(){
+  
+  it('Adding data', function(done){
+        url = 'http://localhost:3000/api';
+    chai.request(url)
+    .post('/accounts')
+    .send({'email': 'test@test.com'})
+    .end(function(err, res){
+      res.should.have.status(200);
+      res.should.be.json;
+      res.body.should.have.property('id');
+      res.body.should.have.property('email');
+      res.body.email.should.equal('test@test.com');
+      if(id == null){
+        id = res.body.id;
+      }
+      done();
+     });
+   });
+});

@@ -10,9 +10,8 @@
       "type": "string"
     },
     "createdAt": {
-      "type": "date",
-      "required": true
-    },
+      "type": "date"
+     },
     "lastModifiedAt": {
       "type": "date"
     },

@@ -30,7 +30,7 @@ module.exports = function(Account) {
 		});
 	};
 
- 
+	 
 	Account.remoteMethod(
 	    'greet',
 	    {
@@ -64,4 +64,5 @@ module.exports = function(Account) {
             returns: {arg: 'results', type: 'string'}
         }
     );
-};
+
+ };

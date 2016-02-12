@@ -1,5 +1,5 @@
 {
-  "name": "Quiz1",
+  "name": "Quiz",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

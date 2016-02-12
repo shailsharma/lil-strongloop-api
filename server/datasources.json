@@ -13,9 +13,9 @@
     "connector": "mongodb"
   },
   "accountDS1": {
-    "host": "ds051740.mongolab.com",
-    "port": 51740,
-    "database": "lil-db",
+    "host": "ds061385.mongolab.com",
+    "port": 61385,
+    "database": "lil-strongloop-api",
     "username": "liluser2",
     "password": "liluser2",
     "name": "accountDS1",

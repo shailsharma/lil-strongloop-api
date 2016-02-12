@@ -1,16 +1,16 @@
-module.exports = function(Quiz1) {
-	Quiz1.beforeRemote('greet', function( context, modelInstance, next) { // modelInstance argument is unused here.. 
+module.exports = function(Quiz) {
+	Quiz.beforeRemote('greet', function( context, modelInstance, next) { // modelInstance argument is unused here.. 
 		console.log('Before Greetings');
 		next();
 	});
  
-	Quiz1.greet = function(cb) {
+	Quiz.greet = function(cb) {
 		var msg = " Greetings ";
 		console.dir(msg);
 		cb(null, msg);
 	};
 
-	Quiz1.remoteMethod(
+	Quiz.remoteMethod(
 	    'greet',
 	    {
 	        http: {path: '/greet', verb: 'get'},
