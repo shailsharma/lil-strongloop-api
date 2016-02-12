@@ -32,13 +32,15 @@ describe('Get /greet', function(){
 
 describe('Post /sendGreet', function(){
   it('Send Greetings via Post', function(done){
-  	url = 'http://localhost:3000/api/accounts';
+        url = 'http://localhost:3000/api/accounts';
     chai.request(url)
     .post('/sendGreet')
     .end(function(err, res){
       res.should.have.status(200);
       res.should.be.json;
+      res.body.should.have.property('results');
+      res.body.results.should.equal('Greetings Recieved');
       done();
-   });  
-  });
-});
+     });
+   });
+})
