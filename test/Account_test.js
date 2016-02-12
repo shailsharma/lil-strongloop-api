@@ -5,7 +5,7 @@ var chai = require('chai');
 var should = chai.should();
 var expect = chai.expect;
 var chaiHttp = require('chai-http');
-var id,body;
+
 
 chai.use(chaiHttp);
 
@@ -33,7 +33,7 @@ describe('Get /greet', function(){
 
 describe('Post /sendGreet', function(){
   it('Send Greetings via Post', function(done){
-        url = 'http://localhost:3000/api/accounts';
+    url = 'http://localhost:3000/api/accounts';
     chai.request(url)
     .post('/sendGreet')
     .end(function(err, res){
@@ -47,22 +47,50 @@ describe('Post /sendGreet', function(){
 });
 
 describe('CRUD Operations', function(){
-  
+  var id;
   it('Adding data', function(done){
-        url = 'http://localhost:3000/api';
+    url = 'http://localhost:3000/api';
     chai.request(url)
     .post('/accounts')
-    .send({'email': 'test@test.com'})
+    .send({'email': 'test1@test.com'})
     .end(function(err, res){
       res.should.have.status(200);
       res.should.be.json;
       res.body.should.have.property('id');
       res.body.should.have.property('email');
-      res.body.email.should.equal('test@test.com');
+      res.body.email.should.equal('test1@test.com');
       if(id == null){
         id = res.body.id;
       }
       done();
      });
    });
+
+   it('Fetching data', function(done){
+    url = 'http://localhost:3000/api/accounts/';
+    chai.request(url)
+    .get(id)
+    .end(function(err, res){
+      res.should.have.status(200);
+      res.should.be.json;
+      res.body.should.have.property('id');
+      res.body.should.have.property('email');
+      res.body.email.should.equal('test1@test.com');
+      done();
+     });
+   });
+
+   it('Deleting data', function(done){
+    url = 'http://localhost:3000/api/accounts/';
+    chai.request(url)
+    .delete(id)
+    .end(function(err, res){
+      res.should.have.status(200);
+      res.should.be.json;
+      res.body.should.have.property('count');
+      res.body.count.should.equal(1);
+      done();
+     });
+   });
+
 });
