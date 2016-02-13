@@ -1,0 +1,33 @@
+{
+  "name": "Assignment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "assignedTo": {
+      "type": "string"
+    },
+    "passing-criteria": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "questions": {
+      "type": "embedsMany",
+      "model": "Question",
+      "property": "questions",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

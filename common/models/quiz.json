@@ -42,10 +42,10 @@
     "thumbnail": {
       "type": "object"
     },
-     "mapping": {
+    "mapping": {
       "type": "object"
     },
-     "Questions": {
+    "Questions": {
       "type": "object"
     }
   },

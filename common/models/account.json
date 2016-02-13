@@ -1,6 +1,7 @@
 {
   "name": "Account",
   "base": "PersistedModel",
+  "strict": false,
   "idInjection": true,
   "options": {
     "validateUpsert": true
@@ -11,16 +12,15 @@
     },
     "createdAt": {
       "type": "date"
-     },
+    },
     "lastModifiedAt": {
       "type": "date"
     },
     "thumbnail": {
       "type": "object",
-      "propertie":  {
+      "properties": {
         "default": {
-          "type": "string",
-           "required": true
+          "type": "string"
         },
         "hqDefault": {
           "type": "string"

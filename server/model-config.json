@@ -39,5 +39,13 @@
   "Quiz": {
     "dataSource": "accountDS1",
     "public": true
+  },
+  "Assignment": {
+    "dataSource": "accountDS1",
+    "public": true
+  },
+  "Question": {
+    "dataSource": "accountDS1",
+    "public": true
   }
 }

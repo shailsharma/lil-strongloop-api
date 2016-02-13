@@ -1,4 +1,7 @@
 module.exports = function(Account) { 
+	// Account.validatesPresenceOf("thumbnail['default']");
+	// Account.validatesUniquenessOf('email');
+
 	Account.sendGreet = function(cb) {
         var msg = "Greetings Recieved";
         console.dir(msg);

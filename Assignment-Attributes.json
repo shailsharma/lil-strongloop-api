@@ -1,0 +1,20 @@
+{
+   "subject" : "<subject name>",
+   "assignedTo" : ["<studen_id>", "<student_id>"],
+   "questions": [
+     {
+       "order" : "<order_number>",
+       "id" : "<questionId>, // Quiz ID",
+       "points" : "<point_for_question>"
+     },
+     {
+       "order" : "<order_number>",
+       "id" : "<questionId>, // Quiz ID",
+       "points" : "<point_for_question>"
+     }
+    ],
+    "passing-criteria": {
+          "min-score" : "<min_score>",
+          "min-correct-answers":  "<min_correct>"
+     }
+}
