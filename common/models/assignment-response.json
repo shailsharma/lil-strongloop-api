@@ -1,16 +1,19 @@
 {
-  "name": "Question",
+  "name": "AssignmentResponse",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "order": {
+      "submittedBy": {
       "type": "string"
     },
-    "points": {
-      "type": "number"
+    "questionId": {
+      "type": "string"
+    },
+    "submittedAnswer": {
+      "type": "object"
     }
   },
   "validations": [],

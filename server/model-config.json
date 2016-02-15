@@ -47,5 +47,9 @@
   "Question": {
     "dataSource": "accountDS1",
     "public": true
+  },
+  "AssignmentResponse": {
+    "dataSource": "accountDS1",
+    "public": true
   }
 }

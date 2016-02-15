@@ -20,5 +20,14 @@
     "password": "liluser2",
     "name": "accountDS1",
     "connector": "mongodb"
+  },
+  "accountDemo": {
+    "host": "demo.strongloop.com",
+    "port": 27017,
+    "database": "demo",
+    "username": "demo",
+    "password": "L00pBack",
+    "name": "accountDS",
+    "connector": "mongodb"
   }
 }
