@@ -1,0 +1,43 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: LIL API
+  description: LIL API Documentation
+  version: "1.0.0"
+# the domain of the service
+host: lil-strongloop-api-8b5234a1.lilapi.svc.tutum.io:3000
+# host: localhost:3000
+# array of all schemes that your API supports
+schemes:
+  - http
+# will be prefixed to all paths
+basePath: /api
+produces:
+  - application/json
+paths:
+  /test:
+    get:
+      summary: Testing Application
+      description: |
+        Basic application with *CRUD* functionality for demonstration purpose. </br>
+      parameters: []
+      tags:
+        - Account
+      responses:
+        200:
+          description: List of data will be fetched 
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Account'
+definitions:
+  Account:
+    type: object
+    properties:
+      attr1:
+        type: string
+        description: Unique Description
+      attr2:
+        type: integer
+        description: Description of product.
