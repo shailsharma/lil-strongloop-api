@@ -18,10 +18,10 @@ module.exports = function(Quiz) {
 				var question = ctx.instance.questions[questionIndex];
 				var id = question.id;
 				var order = question.order;
-				var dummyQuestion = {};
-				dummyQuestion.id = id;
-				dummyQuestion.order = order;
-				ctx.instance.questions[questionIndex] = dummyQuestion;
+				var tmpQuestion = {};
+				tmpQuestion.id = id;
+				tmpQuestion.order = order;
+				ctx.instance.questions[questionIndex] = tmpQuestion;
 
 			}
 			next();
