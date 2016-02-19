@@ -7,10 +7,28 @@
   },
   "properties": {
     "order": {
+      "type": "number"
+    },
+    "type": {
       "type": "string"
     },
-    "points": {
-      "type": "number"
+    "display": {
+      "type": "string"
+    },
+    "questionTxt": {
+      "type": "string"
+    },
+    "resources": {
+      "type": "object"
+    },
+    "answerOptions": {
+      "type": "object"
+    },
+    "answerConfig": {
+      "type": "object"
+    },
+    "hints": {
+      "type": "object"
     }
   },
   "validations": [],

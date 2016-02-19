@@ -9,9 +9,6 @@
     "alias": {
       "type": "string"
     },
-    "UID_Quiz": {
-      "type": "string"
-    },
     "version": {
       "type": "string"
     },
