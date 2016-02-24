@@ -6,28 +6,75 @@
     "validateUpsert": true
   },
   "properties": {
-    "subject": {
+    "alias": {
       "type": "string"
     },
-    "assignedTo": {
+    "stage": {
       "type": "string"
     },
-    "passing-criteria": {
+    "title": {
+      "type": "string"
+    },
+     "subject": {
+      "type": "string"
+    },
+     "topic": {
+      "type": "string"
+    },
+     "assignmentType": {
+      "type": "string"
+    },
+     "UID_Quiz": {
+      "type": "object"
+    },
+     "UID_Resourse": {
+      "type": "string"
+    },
+     "UID_Course": {
+      "type": "string"
+    },
+     "UID_Project": {
+      "type": "string"
+    },
+     "assignQuestionCount": {
+      "type": "number"
+    },
+     "randomize": {
+      "type": "string"
+    },
+     "assignedGroup": {
+      "type": "string"
+    },
+     "assignedDateTime": {
+      "type": "date"
+    },                                                                                          
+     "assignedBy": {
+      "type": "string"
+    },
+     "dueDate": {
+      "type": "date"
+    },
+     "timed": {
+      "type": "boolean"
+    },
+     "allowed_TimeInSeconds": {
+      "type": "date"
+    },
+     "rubric": {
+      "type": "object"
+    },
+     "peerReviewRequired": {
+      "type": "string"
+    },
+     "plannedReviewer": {
+      "type": "object"
+    },
+     "thumbnail": {
       "type": "object"
     }
   },
   "validations": [],
-  "relations": {
-    "questions": {
-      "type": "embedsMany",
-      "model": "Question",
-      "property": "questions",
-      "options": {
-        "validate": true,
-        "forceId": false
-      }
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

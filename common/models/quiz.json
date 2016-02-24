@@ -42,7 +42,7 @@
     "mapping": {
       "type": "object"
     },
-    "Questions": {
+    "questions": {
       "type": "object"
     }
   },

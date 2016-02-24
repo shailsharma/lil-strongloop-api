@@ -2,9 +2,10 @@ module.exports = function(Quiz) {
 		var app = require('../../server/server');	
 		Quiz.observe('before save', function getQuestions(ctx, next) {
 			if (ctx.instance) {
-			var quesModel = app.models.Question;
-			for(var question in ctx.instance.questions){
-	   				quesModel.upsert(ctx.instance.questions[question] , function (err, quesInstance) {
+				var quesModel = app.models.Question;
+				console.log("Question from context" + ctx.instance.questions);
+				for(var question in ctx.instance.questions){
+					quesModel.upsert(ctx.instance.questions[question] , function (err, quesInstance) {
 						if(err){
 							console.log(err);
 						}else {
@@ -12,17 +13,27 @@ module.exports = function(Quiz) {
 						}
 					}); 
 				}
-
-			}
-			for(var questionIndex in ctx.instance.questions){
-				var question = ctx.instance.questions[questionIndex];
-				var id = question.id;
-				var order = question.order;
-				var tmpQuestion = {};
-				tmpQuestion.id = id;
-				tmpQuestion.order = order;
-				ctx.instance.questions[questionIndex] = tmpQuestion;
-
+				for(var questionIndex in ctx.instance.questions){
+					var question = ctx.instance.questions[questionIndex];
+					var id = question.id;
+					var order = question.order;
+					var tmpQuestion = {};
+					tmpQuestion.id = id;
+					tmpQuestion.order = order;
+					ctx.instance.questions[questionIndex] = tmpQuestion;
+				}
+			} else if(ctx.data.questions){
+				var quesModel = app.models.Question;
+				for(var quesIndex in ctx.data.questions){
+					quesModel.upsert(ctx.data.questions[quesIndex], 
+							function (err, quesInstance) {
+							if(err){
+								console.log(err);
+							}else {
+								 console.log("question Instance" + quesInstance);
+							}
+						}); 
+					}
 			}
 			next();
 		});
