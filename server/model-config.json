@@ -51,5 +51,9 @@
   "AssignmentResponse": {
     "dataSource": "accountDS1",
     "public": true
+  },
+   "QuizResponse": {
+    "dataSource": "accountDS1",
+    "public": true
   }
 }

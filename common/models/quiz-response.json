@@ -1,0 +1,42 @@
+{
+  "name": "QuizResponse",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "alias": {
+      "type": "string"
+    },
+    "assignmentId": {
+      "type": "string",
+      "required": true
+    },
+    "version": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "submittedBy": {
+      "type": "string",
+      "required": true
+    },
+    "submissionDateTime": {
+      "type": "string"
+    },
+    "quizId": {
+      "type": "string",
+      "required": true
+    },
+    "questionResponses": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

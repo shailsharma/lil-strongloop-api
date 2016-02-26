@@ -3,15 +3,6 @@
     "name": "db",
     "connector": "memory"
   },
-  "accountDS": {
-    "host": "ds051740.mongolab.com",
-    "port": 51740,
-    "database": "lil-db",
-    "username": "liluser2",
-    "password": "liluser2",
-    "name": "accountDS",
-    "connector": "mongodb"
-  },
   "accountDS1": {
     "host": "ds061385.mongolab.com",
     "port": 61385,
@@ -19,15 +10,6 @@
     "username": "liluser2",
     "password": "liluser2",
     "name": "accountDS1",
-    "connector": "mongodb"
-  },
-  "accountDemo": {
-    "host": "demo.strongloop.com",
-    "port": 27017,
-    "database": "demo",
-    "username": "demo",
-    "password": "L00pBack",
-    "name": "accountDS",
     "connector": "mongodb"
   }
 }
