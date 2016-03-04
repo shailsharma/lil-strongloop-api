@@ -64,10 +64,7 @@ describe('CRUD Operations on Question Model', function(){
     .send({'order':3})
     .end(function(err, res){
       res.should.have.status(200);
-      res.should.have.status(200);
       res.should.be.json;
-      console.log("Id:" + id)
-      console.log("Body" + res.body);
       res.body.should.have.property('id');
       res.body.should.have.property('order');
       res.body.should.have.property('display');

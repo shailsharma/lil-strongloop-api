@@ -33,6 +33,12 @@ module.exports = function(Account) {
 		});
 	};
 
+	Account.test = function(id, cb) {
+		console.log("Hello" + id);
+		Account.findById(id, function (err, instance){
+			cb(null, instance);
+		});
+	};
 	 
 	Account.remoteMethod(
 	    'greet',
@@ -64,6 +70,15 @@ module.exports = function(Account) {
         'sendGreet',
         {
             http: {path: '/sendGreet', verb: 'post'},
+            returns: {arg: 'results', type: 'string'}
+        }
+    );
+
+    Account.remoteMethod(
+        'test',
+        {
+        	accepts:{arg: 'id', type: 'string', required: true},
+            http: {path: '/:id/test', verb: 'get'},
             returns: {arg: 'results', type: 'string'}
         }
     );
